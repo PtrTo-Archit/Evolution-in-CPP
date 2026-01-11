@@ -1,19 +1,16 @@
 # Evolution-in-CPP
 "A comprehensive collection of Data Structures and Algorithms implemented in C++. Featuring optimized solutions to LeetCode problems, organized by topic with complexity analysis."
-# 🚀 Path-to-Optimality: DSA in C++
+# DSA-Vault
 
-This repository is a dedicated space for my daily Data Structures and Algorithms practice. My goal is to master problem-solving patterns and write clean, efficient C++ code.
+My personal collection of Data Structures and Algorithms problems solved in C++. This repo serves as a central hub for my logic building and interview preparation.
 
-## 🛠️ Tech Stack
-- **Language:** C++17 / C++20
-- **Topics:** Arrays, Strings, Linked Lists, Trees, Graphs, DP
-- **Platforms:** LeetCode
+## 📂 Folder Structure
+- **Arrays/**: Linear data structure problems.
+- **Strings/**: Pattern matching and manipulation.
+- **Searching-Sorting/**: Binary search, Merge sort, etc.
+- **LinkedLists/**: Singly, Doubly, and Circular.
+- **Trees-Graphs/**: Hierarchical and networked data.
+- **Dynamic-Programming/**: Optimization problems.
 
-## 📊 Progress Tracker
-| Date | Problem Name | Topic | Difficulty | Solution |
-|------|--------------|-------|------------|----------|
-| 11 Jan | Two Sum | Arrays | Easy | [Link](./Arrays/two_sum.cpp) |
-| 12 Jan | Reverse Linked List | Linked List | Medium | [Link](./LinkedList/reverse.cpp) |
-
-## 📁 Repository Structure
-Each folder contains the solution file with comments explaining the **Time Complexity** ($O(N)$) and **Space Complexity** ($O(1)$).
+## 🚀 How to use
+Each file is a standalone C++ solution. I include the problem link and the Time/Space complexity in the comments at the top of each file.
