@@ -14,3 +14,5 @@ My personal collection of Data Structures and Algorithms problems solved in C++.
 
 ## 🚀 How to use
 Each file is a standalone C++ solution. I include the problem link and the Time/Space complexity in the comments at the top of each file.
+## IMPORTANT NOTES.
+1. Use boolalpha to print true or false instead of 1 and 0.
