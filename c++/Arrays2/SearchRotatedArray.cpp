@@ -1,3 +1,10 @@
+/**
+ * Problem: Search in Rotated Sorted Array
+ * Complexity: Time O(log N), Space O(1)
+ * Approach: Modified Binary Search
+ * * Note: This algorithm works because in a rotated sorted array, 
+ * at least one half (left or right) is always sorted.
+ */
 #include<iostream>
 using namespace std;
  int SearchRotatedArray(int *arr, int n, int target){
