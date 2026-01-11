@@ -1,24 +1,17 @@
 #include<iostream>
-#include<string>
 using namespace std;
-int Validsubstring(string s){
-    int n=s.size();
-    if(n==1){
-        return 1;
+bool check(int nums[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=1;j<n;j++){
+            if(nums[i]==nums[j]){
+                return true;
+            }
+        }
     }
-    if(n<=0){
-        return 0;
-    }
-    int count=0;
-    if(s[0]==s[n-1]){
-        count++;
-    }
-    count+= Validsubstring(s.substr(0,n-1)) + Validsubstring(s.substr(1)) - Validsubstring(s.substr(1,n-2));
-    return count;
+    return false;
 }
 int main(){
-    string s="abcab";
-    
-    cout<<Validsubstring(s.substr(0,5))<<endl;
-    return 0;
+    int nums[]={1,2,3,4,5};
+    int n=sizeof(nums)/sizeof(int);
+    cout<<check(nums,n);
 }

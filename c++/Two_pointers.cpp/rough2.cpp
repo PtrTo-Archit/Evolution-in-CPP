@@ -1,31 +1,18 @@
 #include<iostream>
-#include<climits>
+#include<algorithm>
 using namespace std;
-int trap(int heights[],int n){
-    int leftmax[20000];
-    int rightmax[20000];
-    leftmax[0]=heights[0];// To avoid negative trap.
-    rightmax[n-1]=heights[n-1];
-    for(int i=1;i<n;i++){
-        leftmax[i]=max(leftmax[i-1],heights[i-1]);
-    }
-    for(int i=n-2;i>=0;i--){
-        rightmax[i]=max(rightmax[i+1],heights[i+1]);
-    }
-    int waterTrapped=0;
-    for(int i=0;i<n;i++){
-        int curr_trapped=min(rightmax[i],leftmax[i]) - heights[i];
-        if(curr_trapped>0){
-            waterTrapped+=curr_trapped;
+bool check(int nums[],int n){
+    for(int i=0;i<n-1;i++){
+        if(nums[i+1]==nums[i]){
+            return true;
         }
     }
-    cout<<"Total trapped water = "<<waterTrapped<<endl;
-    return waterTrapped;
+    return false;
 }
-int main() {
-    int heights[]={4,2,0,6,3,2,5};
-    int n=sizeof(heights)/sizeof(int);
-    trap(heights,n);
+int main(){
+    int nums[]={1,2,3,4,5};
+    int n=sizeof(nums)/sizeof(int);
+    sort(nums,nums+n);
+    cout<<boolalpha<<check(nums,n);
     return 0;
-
 }
