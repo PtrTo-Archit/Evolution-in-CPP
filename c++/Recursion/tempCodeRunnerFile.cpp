@@ -1,0 +1,1 @@
+binarystr(n-1,0,ans+'0');

@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    cout<<'a'<<endl<<b<<"\n";
+    
+    cout<<"Hello World";
+    return 0;
+}
