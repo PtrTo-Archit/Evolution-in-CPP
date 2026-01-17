@@ -34,3 +34,38 @@ int main(){
     
     return 0;
 }
+//M-2 
+/* #include<iostream>
+using namespace std;
+bool searchmatrix(int matrix[][4],int n,int m,int key){
+    int row=0;
+    int col=m-1;
+    //int start=matrix[row][col];// yeh start bahar nhi declare kr sakte wrna loop mein start humesha 40 value hi lega toh loop infinite chalega
+    while(row<n && col>=0){
+    int start=matrix[row][col];
+    if(start==key){
+        cout<<"("<<row<<","<<col<<")"<<endl;
+        return true;
+    }
+    else if(start<key){
+        row++;
+    }
+    else{
+        col--;
+    }
+    
+}
+cout<<"Key not found"<<endl;
+return false;
+
+}
+int main(){
+    int matrix[4][4]={{10,20,30,40},
+                      {15,25,35,45},
+                      {27,29,37,48},
+                      {32,33,39,50}};
+    int key=37;
+    searchmatrix(matrix,4,4,key);
+    return 0;
+}
+    */
