@@ -1,30 +1,31 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-void trap(int heights[],int n){
-    int leftmax=heights[0];
-    int rightmax=heights[n-1];
-    int low=1;
-    int high=n-2;
-    int ans=0;
-    while(low<=high){
-        leftmax=max(leftmax,heights[low]);
-        rightmax=max(rightmax,heights[high]);
-        if(leftmax<rightmax){
-            ans+=leftmax-heights[low];
-            low++;
+vector<pair<int,int>> searchmatrix(int matrix[][4],int n,int m,int key){
+    int i=0;
+    int j=m-1;
+    vector<pair<int,int>>v;
+    while(i<n && j>=0){
+        if(matrix[i][j]==key){
+            v.push_back({i,j});
+            return v;
+        }
+        else if(matrix[i][j]<key){
+            i++;
         }
         else{
-            ans+=rightmax-heights[high];
-            high--;
+            j--;
         }
     }
-    cout<<ans<<endl;
-    return;
+    return v;
 }
 int main(){
-    int heights[]={4,2,0,6,3,2,5};
-    int n=sizeof(heights)/sizeof(int);
-    trap(heights,n);
+    int matrix[4][4]={{10,20,30,40},
+                      {15,25,35,45},
+                      {27,29,37,48},
+                      {32,33,39,50}};
+    int key=37;
+    vector<pair<int,int>>v=searchmatrix(matrix,4,4,key);
+    cout<<"("<<v[0].first<<","<<v[0].second<<")";
     return 0;
-
 }

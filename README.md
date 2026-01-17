@@ -16,3 +16,4 @@ My personal collection of Data Structures and Algorithms problems solved in C++.
 Each file is a standalone C++ solution. I include the problem link and the Time/Space complexity in the comments at the top of each file.
 ## IMPORTANT NOTES.
 1. Use boolalpha to print true or false instead of 1 and 0.
+2. v.empty() - <b>Function that returns true if vector has 0 elements and false if it has one or more</b>
