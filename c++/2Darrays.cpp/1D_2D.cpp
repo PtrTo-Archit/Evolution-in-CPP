@@ -26,3 +26,42 @@ int main(){
     return 0;
 
 }
+//M-2
+// #include<iostream>
+// using namespace std;
+// void Print(int matrix[][2],int m,int n){
+//     cout<<"2 D Array : "<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<matrix[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int OneD_to_twoD(int arr[],int k,int m,int n){
+//     int matrix[m][2];
+//     if(k!=m*n){
+//         cout<<"Conversion not possible"<<endl;
+//         return false;
+//     }
+//     for(int i=0;i<m*n;i++){
+//          int row=i/n;
+//          int col=i%n;
+//          matrix[row][col]=arr[i];
+//         }
+//     Print(matrix,m,2);
+//     return true;
+
+// }
+// int main(){
+//     int arr[]={1,2,3,4};
+//     int m=2,n=2;
+//     int k=sizeof(arr)/sizeof(int);
+//     cout<<"1 D Array : "<<endl;
+//     for(int i=0;i<k;i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+//     OneD_to_twoD(arr,k,m,n);
+//     return 0;
+// }
