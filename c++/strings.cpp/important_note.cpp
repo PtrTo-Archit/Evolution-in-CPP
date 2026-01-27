@@ -11,3 +11,18 @@ int main(){
 
 }
 // cin ignores whitespaces 
+// #include <iostream>
+// #include <string>
+
+// int main() {
+//     std::string str = "code";
+    
+//     std::cout << "Initial sizeof: " << sizeof(str) << " | Capacity: " << str.capacity() << std::endl;
+
+//     // Add a massive amount of text
+//     str += " This is a very long string that will definitely exceed the internal buffer size of the string object.";
+
+//     std::cout << "After growth sizeof: " << sizeof(str) << " | Capacity: " << str.capacity() << std::endl;
+
+//     return 0;
+// }
