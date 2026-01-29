@@ -11,5 +11,4 @@ int main(){
     int *x=func();
     cout<<*x<<endl;
     return 0;
-
 }
