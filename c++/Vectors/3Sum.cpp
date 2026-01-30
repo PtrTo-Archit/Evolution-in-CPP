@@ -21,6 +21,7 @@ vector<vector<int>> threeSum(vector<int>&nums){
                 ans.push_back({nums[i],nums[j],nums[k]});
                 j++;
                 k--;
+                // we dont need to check for k duplicate because while checking for j it will remove all duplicacy
                 while(j<k && nums[j]==nums[j-1]){
                     j++;
                 }
