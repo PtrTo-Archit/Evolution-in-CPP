@@ -1,35 +1,35 @@
 #include<iostream>
-#include<string>
+#include<vector>
 using namespace std;
-bool Almostequal(string str1,string str2){
-    int count1[26]={0};
-    int count2[26]={0};
-    int diffcount=0;
-    if(str1==str2){
-        return true;
-    }
-    if(str1.length()!=str2.length()){
-        return false;
-    }
-    for(int i=0;i<str1.length();i++){
-        count1[str1[i]-'a']++;
-        count2[str2[i]-'a']++;
-        if(str1[i]!=str2[i]){
-            diffcount++;
+vector<pair<int,int>> pairSum(const vector<int>&arr,int target){
+    int n=arr.size();
+    vector<pair<int,int>>ans;
+    int i=0;
+    int j=n-1;
+    while(i<j){
+        if(arr[i]+arr[j]==target){
+            ans.push_back({i,j});
+            return ans;
         }
-        if(diffcount>2)return false;
-    }
-    for(int i=0;i<26;i++){
-        if(count1[i]!=count2[i]){
-            return false;
+        else if(arr[i]+arr[j]>target){
+            j--;
+        }
+        else{
+            i++;
         }
     }
-    return true;
+    return ans;
 }
 int main(){
-    string str1="bank";
-    string str2="bink";
-    cout<<boolalpha<<Almostequal(str1, str2);
-    return 0;
+    vector<int>arr={2,7,11,15};
+    int target=9;
+    vector<pair<int,int>>ans=pairSum(arr,target);
+    if(!ans.empty()){
+    cout<<ans[0].first<<","<<ans[0].second;
+    }
+    else{
+        cout<<"No pair found";
+    }
 
+    return 0;
 }
