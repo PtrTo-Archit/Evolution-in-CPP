@@ -18,3 +18,4 @@ Each file is a standalone C++ solution. I include the problem link and the Time/
 1. Use boolalpha to print true or false instead of 1 and 0.
 2. v.empty() - <b>Function that returns true if vector has 0 elements and false if it has one or more</b>
 3. In character arrays we do not need to use loop for input and output of array.
+4. Always use const keyword if we only want to read data of a vector or array so that it shows warning if changes made.
