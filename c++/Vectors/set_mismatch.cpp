@@ -88,3 +88,5 @@ int main(){
 //     cout<<"["<<set[0]<<","<<set[1]<<"]"<<endl;
 //     return 0;
 // }
+
+//M-4 Hasmap frequency
