@@ -20,3 +20,7 @@ Each file is a standalone C++ solution. I include the problem link and the Time/
 3. In character arrays we do not need to use loop for input and output of array.
 4. Always use const keyword if we only want to read data of a vector or array so that it shows warning if changes made.
 5. we should first try to check false condition in any bool return rather than true and true at last return of function(valid palindrome).
+6. when we use <b> static const </b> then the variable is owned by a class not by particular object .
+Imagine you are designing a game with 10,000 "Enemy" characters. Each enemy has a const int MAX_HEALTH = 100;.
+<b>If you use const</b>: You waste memory storing the number "100" ten thousand times.
+<b>If you use static const</b>: You save a significant amount of memory, which is critical in high-performance environments like Game Engines or HFT (High-Frequency Trading).

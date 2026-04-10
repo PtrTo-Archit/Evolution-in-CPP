@@ -1,3 +1,6 @@
+// this method is more cache friendly as it is single memory allocation on stack and no overhead reallocation which makes it faster
+//than using stack container .Though both will have O(n) space complexity .
+// For O(1) space complexity it is possible only if input string has only single variable then we can use counter variable.
 #include<iostream>
 #include<string>
 using namespace std;
