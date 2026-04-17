@@ -35,16 +35,7 @@ class List{
             head=tail=newNode;
         }
     }
-    void push_back(int val){
-        Node *newNode= new Node(val);
-        if(head == NULL){
-            head = tail = newNode;
-        }
-        else{
-            tail->next=newNode;
-            tail=newNode;
-        }
-    }
+
     void print(){
         Node * temp=head;
         while(temp!=NULL){
@@ -53,19 +44,7 @@ class List{
         }
         cout<<"NULL"<<endl;
     }
-    void insert(int val, int pos){
-        Node* newNode=new Node(val);
-        Node *temp=head;
-        for(int i=0;i<pos-1;i++){
-            if(temp==NULL){
-                cout<<"position is Invalid"<<endl;
-                return;
-            }
-            temp=temp->next;
-        }
-        newNode->next=temp->next;
-        temp->next=newNode;
-    }
+
     ~List(){
         cout<<"destructor of list"<<endl;
         if(head!=NULL){
@@ -92,14 +71,14 @@ class List{
                 return;
             }
             // For single node
-            if(head->next=NULL){
+            if(head->next==NULL){
                 delete head;
                 head=tail=NULL;
                 return;
             }
             //for multiple nodes
             Node* temp=head;
-            while(temp->next->next!=NULL){
+            while(temp->next!=tail){
                 temp=temp->next;
             }
             temp->next=NULL;
