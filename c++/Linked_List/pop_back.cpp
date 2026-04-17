@@ -87,16 +87,38 @@ class List{
             delete temp;
             
         }
+        void pop_back(){
+            if(head==NULL){
+                return;
+            }
+            // For single node
+            if(head->next=NULL){
+                delete head;
+                head=tail=NULL;
+                return;
+            }
+            //for multiple nodes
+            Node* temp=head;
+            while(temp->next->next!=NULL){
+                temp=temp->next;
+            }
+            temp->next=NULL;
+            delete tail;
+            tail=temp;
+        }
 };
 
 int main(){
     List ll;
     ll.push_front(5);
-    cout<<ll.tail->data<<endl;
-
-
+    ll.push_front(4);
+    ll.push_front(3);
+    ll.push_front(2);
     ll.print();
     ll.pop_front();
     ll.print();
+    ll.pop_back();
+    ll.print();
+    
     return 0;
 }
