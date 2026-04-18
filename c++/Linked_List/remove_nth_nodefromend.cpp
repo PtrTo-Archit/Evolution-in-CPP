@@ -114,6 +114,46 @@ class List{
         toDel->next=NULL;
         delete toDel;
     }
+    // M-2 using slow and fast pointers
+    void remove_nth_node(int n){
+        Node * slow=head;
+        Node *fast= head;
+        Node* prev=NULL;
+        while(n--){
+            //when n>size
+            if(fast==NULL){
+                cout<<"Invalid n"<<endl;
+                return;
+            }
+            fast=fast->next;
+        }
+        // Edge case for n=5 i.e head node
+        if(fast==NULL){
+            Node * toDel=head;
+            head=head->next;
+            toDel->next=NULL;
+            delete toDel;
+            // For single node
+            if(head==NULL){
+                tail==NULL;
+            }
+            return;
+        }
+        while(fast!=NULL){
+            prev=slow;
+
+            slow=slow->next;
+            fast=fast->next;
+        }
+        //Update Tail
+        if(slow==tail){
+            tail=prev;
+        }
+        prev->next=slow->next;
+        slow->next=NULL;
+        delete slow;
+        
+    } 
 };
 
 int main(){
@@ -126,6 +166,9 @@ int main(){
     ll.print();
     ll.remove(5);
     ll.print();
+    ll.remove_nth_node(3);
+    ll.print();
+
     
     return 0;
 }
