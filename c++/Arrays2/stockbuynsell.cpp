@@ -53,25 +53,48 @@
 //     cout<<"Maximum profit is : "<<maxProfit(prices,n);
 //     return 0;
 // }
+// Time complexity - O(n) && Space complexity - O(n)
+// #include<iostream>
+// #include<climits>
+// using namespace std;
+// int maxProfit(int arr[],int n){
+//     int buy[100000];  //Auxillary array bestbuy.
+//     buy[0]=INT_MAX;
+//     for(int i=1;i<n;i++){
+//         buy[i]=min(arr[i],buy[i-1]);
+//     }
+//     int profit=0;// here initial with 0 helps avoid negative profit.
+//     for(int i=0;i<n;i++){
+//        int currprofit=arr[i]-buy[i];
+//        profit=max(currprofit,profit);
+//     }
+//     return profit;
+// }
+// int main(){
+//     int arr[]={7,5,4,3,2,1};
+//     cout<<maxProfit(arr,6);
+//     return 0;
+
+// }
+
+// Most optimized solution
 #include<iostream>
 #include<climits>
 using namespace std;
-int maxProfit(int arr[],int n){
-    int buy[100000];  //Auxillary array bestbuy.
-    buy[0]=INT_MAX;
-    for(int i=1;i<n;i++){
-        buy[i]=min(arr[i],buy[i-1]);
-    }
-    int profit=0;// here initial with 0 helps avoid negative profit.
+void max(int arr[], int n){
+    int minPrice=INT_MAX;
+    int maxProfit=0;
     for(int i=0;i<n;i++){
-       int currprofit=arr[i]-buy[i];
-       profit=max(currprofit,profit);
+        if(arr[i]>minPrice){
+            maxProfit=max(maxProfit,arr[i]-minPrice);
+        }
+        minPrice=min(arr[i],minPrice);
     }
-    return profit;
+    cout<<maxProfit;
+    return;
 }
 int main(){
-    int arr[]={7,5,4,3,2,1};
-    cout<<maxProfit(arr,6);
+    int arr[]={7,1,5,3,6,4};
+    max(arr, 6);
     return 0;
-
 }
