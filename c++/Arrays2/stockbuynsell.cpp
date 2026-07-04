@@ -81,7 +81,7 @@
 #include<iostream>
 #include<climits>
 using namespace std;
-void max(int arr[], int n){
+void maxi(int arr[], int n){
     int minPrice=INT_MAX;
     int maxProfit=0;
     for(int i=0;i<n;i++){
@@ -95,6 +95,6 @@ void max(int arr[], int n){
 }
 int main(){
     int arr[]={7,1,5,3,6,4};
-    max(arr, 6);
+    maxi(arr, 6);
     return 0;
 }
