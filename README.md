@@ -24,3 +24,4 @@ Each file is a standalone C++ solution. I include the problem link and the Time/
 Imagine you are designing a game with 10,000 "Enemy" characters. Each enemy has a const int MAX_HEALTH = 100;.
 <b>If you use const</b>: You waste memory storing the number "100" ten thousand times.
 <b>If you use static const</b>: You save a significant amount of memory, which is critical in high-performance environments like Game Engines or HFT (High-Frequency Trading).
+7. Equal- <b> It is a function used to check whether two arrays are equal. Used in order to avoid loops for checking </b>.
