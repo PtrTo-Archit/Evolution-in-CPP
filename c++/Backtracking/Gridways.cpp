@@ -20,27 +20,27 @@
 // }
 
 //M-2 Using nCR
-#include<iostream>
-using namespace std;
-int nCr(int n,int r){
-    if(r>n-r){
-        r=n-r;
-    }
+// #include<iostream>
+// using namespace std;
+// int nCr(int n,int r){
+//     if(r>n-r){
+//         r=n-r;
+//     }
 
-    long long ans=1;
-    for(int i=1;i<=r;i++){
-        ans=ans*(n-r+i)/i;
-    }
-    return ans;
-}
-int gridWays(int n,int m){
-   long long count=nCr(n+m-2,n-1);
-   return count;
-}
-int main(){
-    int n=3;
-    int m=3;
-    int count=gridWays(n,m);
-    cout<<count;
-    return 0;
-}
+//     long long ans=1;
+//     for(int i=1;i<=r;i++){
+//         ans=ans*(n-r+i)/i;
+//     }
+//     return ans;
+// }
+// int gridWays(int n,int m){
+//    long long count=nCr(n+m-2,n-1);
+//    return count;
+// }
+// int main(){
+//     int n=3;
+//     int m=3;
+//     int count=gridWays(n,m);
+//     cout<<count;
+//     return 0;
+// }
