@@ -22,6 +22,7 @@ class Stack{
       return ll.front();
    }
    bool isEmpty(){
+      // return ll.empty();
       return ll.size()==0;
    }
 };
