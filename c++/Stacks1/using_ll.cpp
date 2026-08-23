@@ -43,6 +43,9 @@ class Stack{
       }
       return head->data;
    }
+   bool isEmpty(){
+      return head==NULL;
+   }
 };
 int main(){
    Stack s;
