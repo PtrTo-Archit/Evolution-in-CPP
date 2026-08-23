@@ -1,29 +1,47 @@
 #include<iostream>
-#include<list>
 using namespace std;
-class Stack{
-   list<int>ll;
+class Node{
    public:
+   int data;
+   Node* next;
+   Node(int val){
+      data=val;
+      next=NULL;
+   }
+};
+
+class Stack{
+   Node* head;
+   public:
+   Stack(){
+      head=NULL;
+   }
    void push(int val){
-      ll.push_front(val);
+      Node* newNode= new Node(val);
+      if(head==NULL){
+         head=newNode;
+      }
+      else{
+         newNode->next=head;
+         head=newNode;
+      }
    }
    void pop(){
-      if(isEmpty()){
+      if(head==NULL){
          cout<<"Stack is empty";
          return;
       }
-      ll.pop_front();
+      Node*temp=head;
+      head=temp->next;
+      temp->next=NULL;
+      delete temp;
    }
    int top(){
-      if(isEmpty()){
+      if(head==NULL){
          cout<<"Stack is Empty";
          return -1;
       }
-      return ll.front();
-   }
-   bool isEmpty(){
-      // return ll.empty();
-      return ll.size()==0;
+      return head->data;
    }
 };
 int main(){
