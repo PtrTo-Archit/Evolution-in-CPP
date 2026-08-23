@@ -6,8 +6,8 @@ void reverse(string &str){
     for(int i=0;i<str.size();i++){
         s.push(str[i]);
     }
+    int i=0;
     while(!s.empty()){
-        int i=0;
         str[i++]=s.top();
         s.pop();
     }
