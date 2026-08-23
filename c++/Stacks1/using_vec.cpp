@@ -23,7 +23,7 @@ class Stack{
         return vec[lastidx];
     }
     bool isEmpty(){
-        return vec.size()==0;
+        return vec.empty();
     }
 };
 int main(){
